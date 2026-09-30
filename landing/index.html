@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A focused SEM landing page built for high-intent search traffic, fast mobile performance, and measurable conversions.">
+<title>Search Growth Landing Page</title>
+<style>
+:root{
+  color-scheme:light dark;
+  --bg:light-dark(#f7f8fc,#0b1020);
+  --surface:light-dark(#ffffff,#12182a);
+  --surface2:light-dark(#eef1f7,#182039);
+  --text:light-dark(#111827,#f5f7ff);
+  --muted:light-dark(#5b6475,#aeb8d0);
+  --line:light-dark(#dfe4ee,#29334f);
+  --accent:light-dark(#5b46f0,#8b7cff);
+  --accent2:light-dark(#17a673,#36d49a);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+#app{min-height:100vh;background:var(--bg)}
+.wrap{width:min(1120px,92%);margin:auto}
+.progress{
+  position:fixed;left:0;top:0;width:0;height:2px;background:var(--accent);
+  z-index:50;box-shadow:0 0 18px color-mix(in srgb,var(--accent),transparent 40%);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;padding:22px 0;
+  border-bottom:1px solid transparent;position:relative;z-index:10;
+}
+.brand{font-weight:800;letter-spacing:-.03em}
+.badge{
+  font-size:12px;padding:7px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);
+}
+.hero{
+  padding:72px 0 56px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;min-height:620px;
+}
+.eyebrow{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.hero h1{font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-.055em;margin:16px 0;max-width:760px}
+.hero h1 span{display:inline-block}
+.hero p{font-size:19px;line-height:1.65;color:var(--muted);max-width:680px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  border:0;border-radius:12px;padding:14px 20px;font-weight:800;cursor:pointer;background:var(--accent);color:#fff;
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease),background .3s ease;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 18px 45px color-mix(in srgb,var(--accent),transparent 72%)}
+.btn.alt{background:var(--surface2);color:var(--text);border:1px solid var(--line)}
+.panel{
+  background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px;
+  box-shadow:0 18px 60px #00000018;position:relative;overflow:hidden;
+  transition:transform .7s var(--ease),box-shadow .7s var(--ease);
+}
+.panel::after{
+  content:"";position:absolute;inset:-40%;
+  background:radial-gradient(circle at 50% 50%,color-mix(in srgb,var(--accent),transparent 87%),transparent 45%);
+  opacity:.55;pointer-events:none;transform:translateY(20%);transition:transform 1s var(--ease);
+}
+.panel:hover{transform:translateY(-6px);box-shadow:0 28px 90px #00000022}
+.panel:hover::after{transform:translateY(-8%)}
+.search{
+  background:var(--surface2);border-radius:14px;padding:14px 15px;margin-bottom:20px;color:var(--muted);font-size:14px;
+  position:relative;z-index:1;
+}
+.search .search-icon{display:inline-block;width:10px;height:10px;border:1.5px solid currentColor;border-radius:50%;margin-right:9px;position:relative;vertical-align:-1px}
+.search .search-icon::after{content:"";position:absolute;width:5px;height:1.5px;background:currentColor;right:-4px;bottom:-2px;transform:rotate(45deg);transform-origin:left center}
+.metric{
+  display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);position:relative;z-index:1;
+}
+.metric:last-child{border:0}
+.metric strong{font-size:22px;letter-spacing:-.04em}
+.section{padding:68px 0}
+.section h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em;margin:0 0 14px}
+.lead{color:var(--muted);font-size:17px;line-height:1.7;max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.card{
+  padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--surface);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .4s ease;
+}
+.card:hover{transform:translateY(-7px);box-shadow:0 20px 45px #00000016;border-color:color-mix(in srgb,var(--accent),var(--line) 70%)}
+.icon{font-size:24px;color:var(--accent);font-weight:850}
+.card h3{margin:16px 0 8px}
+.card p{color:var(--muted);line-height:1.65}
+.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;overflow:hidden}
+.stat b{display:block;font-size:28px;letter-spacing:-.04em}
+.faq{border-top:1px solid var(--line)}
+details{padding:20px 0;border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:20px;line-height:1;transition:transform .35s var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+.cta{
+  margin:20px 0 72px;padding:42px;border-radius:24px;background:var(--surface2);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;gap:30px;overflow:hidden;position:relative;
+}
+.cta::before{content:"";position:absolute;width:220px;height:220px;right:-90px;top:-90px;border-radius:50%;background:color-mix(in srgb,var(--accent),transparent 84%);filter:blur(5px);transition:transform 1s var(--ease)}
+.cta:hover::before{transform:scale(1.35)}
+.footer{border-top:1px solid var(--line);padding:28px 0 50px;color:var(--muted);font-size:13px}
+.note{font-size:12px;color:var(--muted);margin-top:18px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.08s}.reveal-delay-2{transition-delay:.16s}.reveal-delay-3{transition-delay:.24s}
+.line-grow{position:relative}
+.line-grow::after{content:"";display:block;width:0;height:2px;background:var(--accent);margin-top:14px;transition:width 1s var(--ease)}
+.line-grow.in::after{width:72px}
+.stat-value{display:inline-block}
+@media(max-width:800px){
+  .hero{grid-template-columns:1fr;padding-top:40px;min-height:auto}
+  .grid{grid-template-columns:1fr}
+  .proof{grid-template-columns:1fr 1fr}
+  .cta{flex-direction:column;align-items:flex-start}
+  .hero p{font-size:17px}
+}
+@media(max-width:480px){
+  .proof{grid-template-columns:1fr}
+  .nav{padding:16px 0;gap:12px}
+  .badge{font-size:10px}
+  .hero h1{font-size:46px}
+  .actions .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<div id="app">
+  <div class="wrap">
+    <nav class="nav reveal in">
+      <div class="brand">Search / Growth</div>
+      <div class="badge">SEM Landing Page · Portfolio Concept</div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="reveal">
+          <div class="eyebrow">Built for high-intent search</div>
+          <h1 class="line-grow">Turn search demand into <span>qualified action.</span></h1>
+          <p>A focused landing experience designed around one service, one audience, and one measurable conversion goal—without distracting navigation or unnecessary steps.</p>
+          <div class="actions">
+            <button class="btn" data-scroll="#contact">Get a strategy call</button>
+            <button class="btn alt" data-scroll="#process">See how it works</button>
+          </div>
+          <div class="note">Self-initiated portfolio concept · not previous client work</div>
+        </div>
+
+        <div class="panel reveal reveal-delay-2">
+          <div class="search"><span class="search-icon" aria-hidden="true"></span>service + solution + near me</div>
+          <div class="metric"><span>Message match</span><strong>01</strong></div>
+          <div class="metric"><span>Primary CTA</span><strong>01</strong></div>
+          <div class="metric"><span>Mobile-first</span><strong>100%</strong></div>
+          <div class="metric"><span>Friction</span><strong>Low</strong></div>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <div class="eyebrow reveal">Conversion architecture</div>
+        <h2 class="reveal">Every section has a job.</h2>
+        <p class="lead reveal">The page is structured to preserve search intent from the ad through the first action, while making the value proposition easy to scan on mobile.</p>
+        <div class="grid">
+          <article class="card reveal reveal-delay-1"><div class="icon">01</div><h3>Message match</h3><p>Align the headline, offer and proof with the intent behind the search query and campaign.</p></article>
+          <article class="card reveal reveal-delay-2"><div class="icon">02</div><h3>Trust quickly</h3><p>Use concise proof, process details and objection handling before asking for the conversion.</p></article>
+          <article class="card reveal reveal-delay-3"><div class="icon">03</div><h3>One action</h3><p>Keep the primary conversion path obvious and reduce competing navigation and decisions.</p></article>
+        </div>
+        <div class="proof">
+          <div class="stat reveal reveal-delay-1"><b class="stat-value" data-count="1">0</b><span>Core offer</span></div>
+          <div class="stat reveal reveal-delay-2"><b class="stat-value" data-count="3">0</b><span>Proof layers</span></div>
+          <div class="stat reveal reveal-delay-3"><b class="stat-value" data-count="2">0</b><span>CTA placements</span></div>
+          <div class="stat reveal"><b>∞</b><span>Test iterations</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="eyebrow reveal">SEO / SEM ready structure</div>
+        <h2 class="reveal">Built to be tested, not just admired.</h2>
+        <div class="grid">
+          <article class="card reveal reveal-delay-1"><h3>Semantic content</h3><p>Clear heading hierarchy, descriptive metadata, concise copy blocks and accessible interaction patterns.</p></article>
+          <article class="card reveal reveal-delay-2"><h3>Responsive QA</h3><p>Mobile-first layout with fluid typography and breakpoints designed for narrow and wide screens.</p></article>
+          <article class="card reveal reveal-delay-3"><h3>Iteration ready</h3><p>Sections are modular so campaign-specific messaging, proof and CTA variants can be tested without redesigning the whole page.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="eyebrow reveal">FAQ</div>
+        <div class="faq reveal">
+          <details open><summary>Can the page be adapted to a specific SEM campaign?</summary><p class="lead">Yes. The information architecture is intentionally modular so search intent, offer, proof and CTA can be tailored to a campaign.</p></details>
+          <details><summary>What would be tested before launch?</summary><p class="lead">Responsive layout, navigation and CTA behavior, content hierarchy, form interaction, browser/device rendering and basic performance issues.</p></details>
+          <details><summary>Is this a previous client project?</summary><p class="lead">No. This is a self-initiated portfolio concept created to demonstrate the workflow honestly.</p></details>
+        </div>
+      </section>
+
+      <section class="cta reveal" id="contact">
+        <div>
+          <div class="eyebrow">Ready for a focused page?</div>
+          <h2 style="margin:8px 0">Make the next click count.</h2>
+          <p class="lead">A concise landing experience can be adapted to the client's actual offer, brand and campaign requirements.</p>
+        </div>
+        <button class="btn" id="cta">Request a consultation</button>
+      </section>
+    </main>
+
+    <footer class="footer">Self-initiated Webflow-style SEM landing page concept. No client work is represented as prior experience.</footer>
+  </div>
+</div>
+<script>
+(() => {
+  const progress = document.querySelector('.progress');
+  const revealItems = document.querySelectorAll('.reveal:not(.in)');
+
+  const updateProgress = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
+    progress.style.width = `${Math.min(100, ratio * 100)}%`;
+  };
+
+  window.addEventListener('scroll', updateProgress, {passive:true});
+  updateProgress();
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in');
+      if (entry.target.matches('.stat')) animateCounter(entry.target.querySelector('[data-count]'));
+      observer.unobserve(entry.target);
+    });
+  }, {threshold:.16, rootMargin:'0px 0px -40px'});
+
+  function animateCounter(el){
+    if(!el || el.dataset.done) return;
+    el.dataset.done = '1';
+    const target = Number(el.dataset.count || 0);
+    const start = performance.now();
+    const duration = 620;
+    const tick = now => {
+      const p = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = String(Math.round(target * eased));
+      if(p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  revealItems.forEach(el => observer.observe(el));
+  document.querySelectorAll('[data-scroll]').forEach(btn => {
+    btn.addEventListener('click', () => document.querySelector(btn.dataset.scroll)?.scrollIntoView({behavior:'smooth'}));
+  });
+  document.getElementById('cta').addEventListener('click', () => {
+    const btn = document.getElementById('cta');
+    const old = btn.textContent;
+    btn.textContent = 'Demo CTA captured ✓';
+    setTimeout(() => btn.textContent = old, 1500);
+  });
+})();
+</script>
+</body>
+</html>
