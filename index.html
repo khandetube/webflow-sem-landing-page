@@ -3,96 +3,267 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Self-initiated SEM landing page concept — art-directed, responsive and interaction-driven.">
-<title>SEARCH / SIGNAL — SEM Landing Page Concept</title>
+<meta name="description" content="A focused SEM landing page built for high-intent search traffic, fast mobile performance, and measurable conversions.">
+<title>Search Growth Landing Page</title>
 <style>
-:root{--bg:#070707;--paper:#f3f0e9;--ink:#111;--muted:#8d8b86;--line:#ffffff1c;--acid:#d9ff39;--violet:#8d6bff;--blue:#6fe7ff;--red:#ff5c7a;--ease:cubic-bezier(.16,1,.3,1)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}button,a{font:inherit;color:inherit}a{text-decoration:none}
-body:before{content:"";position:fixed;inset:0;z-index:-5;background:radial-gradient(circle at 78% 10%,#8d6bff1c,transparent 28%),radial-gradient(circle at 12% 58%,#d9ff3910,transparent 25%);pointer-events:none}
-body:after{content:"";position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='x'%3E%3CfeTurbulence baseFrequency='.75' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E")}
-.progress{position:fixed;top:0;left:0;width:0;height:2px;background:var(--acid);z-index:100;box-shadow:0 0 18px var(--acid)}
-.wrap{width:min(1380px,92vw);margin:auto}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:.14em;text-transform:uppercase;position:relative;z-index:20}.logo{font-weight:900;letter-spacing:-.06em;font-size:17px}.logo b{color:var(--acid)}.navlinks{display:flex;gap:28px;color:#999;font-weight:700}.navlinks a:hover{color:#fff}.availability{display:flex;align-items:center;gap:8px;color:#aaa}.dot{width:6px;height:6px;border-radius:50%;background:var(--acid);box-shadow:0 0 14px var(--acid)}
-.hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;position:relative;padding:70px 0 110px}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.22em;color:#85837e;font-weight:800}.hero h1{font-size:clamp(75px,12vw,178px);line-height:.76;letter-spacing:-.105em;margin:20px 0 32px;max-width:950px}.hero h1 span{display:block}.hero h1 .acid{color:var(--acid)}.hero-copy p{max-width:610px;color:#a4a19a;font-size:17px;line-height:1.75;margin:0}.hero-actions{display:flex;gap:10px;margin-top:32px}.btn{border:1px solid #fff2;border-radius:100px;background:#fff;color:#111;padding:14px 20px;font-weight:900;font-size:11px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;transition:.35s var(--ease)}.btn:hover{transform:translateY(-4px);box-shadow:0 20px 50px #fff2}.btn.dark{background:transparent;color:#fff}.hero-art{height:620px;position:relative;perspective:1200px}.poster{position:absolute;inset:8% 4% 5% 10%;border:1px solid #fff2;background:#111;overflow:hidden;transform:rotateY(-15deg) rotateX(6deg);box-shadow:45px 55px 100px #000;transform-style:preserve-3d}.poster:before{content:"";position:absolute;width:430px;height:430px;border-radius:50%;right:-90px;top:55px;background:radial-gradient(circle at 35% 35%,#fff, var(--blue) 8%,var(--violet) 28%,#ff4d8d 52%,transparent 67%);filter:blur(2px);animation:planet 8s ease-in-out infinite}.poster:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 35%,#ffffff10 50%,transparent 65%);transform:translateX(-100%);animation:scan 5s infinite}.poster-grid{position:absolute;inset:0;background:linear-gradient(#fff1 1px,transparent 1px),linear-gradient(90deg,#fff1 1px,transparent 1px);background-size:40px 40px;mask-image:linear-gradient(90deg,#000,transparent 90%);opacity:.35}.poster-title{position:absolute;left:28px;top:25px;font-size:11px;letter-spacing:.18em;color:#aaa;text-transform:uppercase}.poster-big{position:absolute;left:25px;bottom:35px;font-size:clamp(48px,6vw,88px);line-height:.78;letter-spacing:-.09em;font-weight:900}.poster-big i{font-style:normal;color:var(--acid)}.stamp{position:absolute;right:20px;bottom:25px;width:88px;height:88px;border:1px solid #fff5;border-radius:50%;display:grid;place-items:center;font-size:8px;text-align:center;letter-spacing:.12em;text-transform:uppercase;animation:spin 12s linear infinite}.float-card{position:absolute;z-index:4;background:#171717;border:1px solid #fff2;padding:14px 16px;box-shadow:20px 30px 70px #000}.fc1{right:-5%;top:8%;transform:rotate(5deg)}.fc2{left:0;bottom:9%;transform:rotate(-5deg)}.float-card small{display:block;color:#777;font-size:8px;letter-spacing:.12em}.float-card strong{display:block;font-size:20px;margin-top:6px}.hero-note{position:absolute;bottom:20px;left:0;color:#666;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
-.section{padding:170px 0}.section-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:end}.section-intro h2{font-size:clamp(55px,8vw,120px);line-height:.78;letter-spacing:-.1em;margin:15px 0 0}.section-intro p{max-width:650px;color:#96938d;line-height:1.8;font-size:16px}.rule{height:1px;background:var(--line);margin:55px 0}
-.bento{display:grid;grid-template-columns:1.1fr .9fr .9fr;grid-template-rows:280px 280px;gap:14px}.tile{border:1px solid #fff1;border-radius:2px;background:#0d0d0d;position:relative;overflow:hidden;padding:25px;transition:.5s var(--ease);transform-style:preserve-3d}.tile:hover{transform:translateY(-8px);border-color:#fff4}.tile.big{grid-row:span 2;background:linear-gradient(145deg,#121212,#080808)}.tile h3{font-size:29px;letter-spacing:-.05em;margin:12px 0}.tile p{font-size:12px;line-height:1.7;color:#85827d;max-width:360px}.tile .num{font-size:9px;color:#666;letter-spacing:.15em}.tile .signal{position:absolute;right:-30px;bottom:-70px;width:260px;height:260px;border-radius:50%;border:1px solid #fff2;box-shadow:0 0 0 25px #fff1,0 0 0 50px #fff0;animation:pulse 5s infinite}.tile .signal:after{content:"";position:absolute;inset:35px;border-radius:50%;background:radial-gradient(circle,#d9ff39,transparent 65%);filter:blur(5px)}.tile .bars{position:absolute;left:25px;right:25px;bottom:28px;display:flex;gap:6px;align-items:end;height:100px}.tile .bars i{flex:1;background:linear-gradient(var(--acid),#ffffff12);transform-origin:bottom;animation:bar 2.5s var(--ease) infinite alternate}.tile .bars i:nth-child(1){height:35%}.tile .bars i:nth-child(2){height:70%;animation-delay:.2s}.tile .bars i:nth-child(3){height:50%;animation-delay:.4s}.tile .bars i:nth-child(4){height:88%;animation-delay:.1s}.tile .bars i:nth-child(5){height:62%;animation-delay:.5s}.tile .mini-line{position:absolute;left:25px;right:25px;bottom:30px;height:1px;background:linear-gradient(90deg,var(--acid),transparent);transform-origin:left;animation:line 3s infinite}.tile:nth-child(3){background:linear-gradient(145deg,#131026,#09080d)}.tile:nth-child(4){background:linear-gradient(145deg,#0d1416,#080808)}
-.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0;color:#6d6a65;font-size:10px;letter-spacing:.18em;text-transform:uppercase}.ticker-track{display:inline-flex;gap:50px;animation:ticker 25s linear infinite}.ticker b{color:#fff}.ticker em{color:var(--acid);font-style:normal}
-.showcase{padding:170px 0}.showcase-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}.showcase-head h2{font-size:clamp(55px,8vw,115px);line-height:.78;letter-spacing:-.1em;margin:15px 0 0}.showcase-head p{max-width:370px;color:#888;line-height:1.7;font-size:13px}.rail{display:flex;gap:18px;overflow-x:auto;scrollbar-width:none;padding:10px 4vw 40px;cursor:grab}.rail::-webkit-scrollbar{display:none}.rail.drag{cursor:grabbing}.slide{flex:0 0 min(690px,78vw);height:620px;background:#101010;border:1px solid #fff2;position:relative;overflow:hidden;scroll-snap-align:center}.slide-art{position:absolute;inset:0}.slide:nth-child(1) .slide-art{background:radial-gradient(circle at 70% 30%,#6fe7ff99,transparent 16%),linear-gradient(135deg,#121b1d,#080808)}.slide:nth-child(2) .slide-art{background:radial-gradient(circle at 28% 62%,#d9ff3988,transparent 18%),linear-gradient(135deg,#17190d,#080808)}.slide:nth-child(3) .slide-art{background:radial-gradient(circle at 72% 68%,#8d6bff99,transparent 20%),linear-gradient(135deg,#15111e,#080808)}.slide-art .shape{position:absolute;left:50%;top:48%;width:280px;height:280px;border:1px solid #fff5;transform:translate(-50%,-50%) rotate(20deg);box-shadow:0 0 0 35px #fff1,0 0 0 70px #fff1;animation:spin 16s linear infinite}.slide:nth-child(2) .shape{border-radius:50%;animation:float 4s infinite}.slide:nth-child(3) .shape{clip-path:polygon(50% 0,100% 100%,0 100%);animation:spin 10s linear infinite reverse}.slide-label{position:absolute;left:25px;top:24px;font-size:9px;color:#aaa;letter-spacing:.18em}.slide-copy{position:absolute;left:25px;right:25px;bottom:25px}.slide-copy h3{font-size:46px;line-height:.86;letter-spacing:-.07em;margin:0 0 12px}.slide-copy p{color:#aaa;max-width:520px;line-height:1.65;font-size:13px}
-.process{padding:170px 0}.process-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.process-sticky{position:sticky;top:120px;height:max-content}.process-sticky h2{font-size:clamp(55px,7vw,105px);line-height:.78;letter-spacing:-.1em;margin:15px 0}.process-sticky p{color:#8e8b85;line-height:1.8;max-width:430px}.steps{border-top:1px solid var(--line)}.step{min-height:220px;border-bottom:1px solid var(--line);padding:30px 0;display:grid;grid-template-columns:70px 1fr;gap:25px;opacity:.35;transform:translateX(25px);transition:.8s var(--ease)}.step.active{opacity:1;transform:none}.step .n{font-size:10px;color:var(--acid);letter-spacing:.15em}.step h3{font-size:35px;letter-spacing:-.05em;margin:0 0 12px}.step p{color:#8e8b85;line-height:1.7;font-size:13px;max-width:620px}
-.engineering{padding:170px 0}.terminal-wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px}.terminal{border:1px solid #fff2;background:#050505;min-height:470px;padding:28px;position:relative;overflow:hidden}.terminal:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--acid);box-shadow:0 0 25px var(--acid)}.terminal h3{font-size:10px;color:#777;letter-spacing:.15em;text-transform:uppercase}.code{font:12px/2 ui-monospace,monospace;color:#b9b6af;margin-top:30px}.c{color:var(--acid)}.p{color:var(--blue)}.v{color:#ff8ca3}.terminal .glow{position:absolute;width:250px;height:250px;right:-100px;bottom:-100px;border-radius:50%;background:var(--violet);filter:blur(90px);opacity:.18}.engineering-copy{padding:30px}.engineering-copy h2{font-size:clamp(55px,7vw,105px);line-height:.78;letter-spacing:-.1em;margin:15px 0}.engineering-copy p{color:#8e8b85;line-height:1.8;max-width:520px}.checks{margin-top:30px;display:grid;gap:10px}.checks div{border-bottom:1px solid var(--line);padding:13px 0;font-size:11px;color:#aaa}.checks b{color:var(--acid);margin-right:9px}
-.faq{padding:160px 0}.faq h2{font-size:clamp(55px,8vw,115px);line-height:.78;letter-spacing:-.1em;margin:15px 0 60px}.faq-list{max-width:950px;border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:23px 0}summary{cursor:pointer;font-size:18px;font-weight:800;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"+";float:right;color:var(--acid);font-size:25px}details[open] summary:after{content:"−"}details p{color:#888;line-height:1.8;max-width:760px;font-size:13px}
-.final{padding:100px 0 150px}.final-box{border:1px solid #fff2;min-height:520px;padding:55px;position:relative;overflow:hidden;background:linear-gradient(120deg,#111,#090909)}.final-box:before{content:"";position:absolute;width:600px;height:600px;right:-180px;top:-220px;border-radius:50%;background:radial-gradient(circle,#d9ff3966,transparent 65%);filter:blur(12px)}.final h2{position:relative;font-size:clamp(65px,9vw,135px);line-height:.76;letter-spacing:-.1em;max-width:1000px;margin:18px 0 30px}.final p{position:relative;color:#92908b;max-width:600px;line-height:1.8}.footer{border-top:1px solid var(--line);padding:28px 0 45px;color:#666;font-size:9px;letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between}
-.search{position:fixed;right:22px;bottom:22px;width:52px;height:52px;border-radius:50%;border:1px solid #fff3;background:#0d0d0de8;backdrop-filter:blur(14px);display:grid;place-items:center;z-index:80;cursor:pointer;transition:.3s}.search:hover{background:#fff;color:#111;transform:scale(1.08)}.search svg{width:18px}.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);opacity:0;background:#fff;color:#111;padding:12px 17px;border-radius:30px;font-size:10px;font-weight:900;z-index:90;transition:.3s}.toast.show{opacity:1;transform:translate(-50%,0)}
-@keyframes planet{50%{transform:translate(-20px,25px) scale(1.08)}}@keyframes scan{45%,100%{transform:translateX(100%)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{transform:scale(1.15);opacity:.55}}@keyframes bar{to{transform:scaleY(.55)}}@keyframes line{50%{transform:scaleX(.25)}}@keyframes ticker{to{transform:translateX(-50%)}}@keyframes float{50%{transform:translate(-50%,-58%) rotate(12deg)}} 
-@media(max-width:900px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:50px}.hero-art{height:500px;margin-top:-20px}.poster{inset:5% 3% 3% 8%}.section-intro,.process-grid,.terminal-wrap{grid-template-columns:1fr}.bento{grid-template-columns:1fr 1fr;grid-template-rows:280px 280px 280px}.tile.big{grid-row:span 1;grid-column:span 2}.process-sticky{position:relative;top:auto}.showcase-head{display:block}.showcase-head p{margin-top:25px}}
-@media(max-width:560px){.wrap{width:90vw}.topbar{height:64px}.availability{display:none}.hero{min-height:auto;padding:70px 0 100px}.hero h1{font-size:70px}.hero-copy p{font-size:15px}.hero-art{height:420px}.poster{inset:4% 0 3% 4%}.float-card{transform:scale(.8)}.fc1{right:-8%}.fc2{left:-5%}.section,.showcase,.process,.engineering,.faq{padding:105px 0}.section-intro{gap:20px}.bento{display:block}.tile{height:280px;margin-bottom:12px}.slide{flex-basis:84vw;height:500px}.slide-copy h3{font-size:37px}.step{grid-template-columns:45px 1fr}.step h3{font-size:28px}.final-box{padding:35px 25px;min-height:480px}.footer{display:block}.footer span{display:block;margin-top:12px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+:root{
+  color-scheme:light dark;
+  --bg:light-dark(#f7f8fc,#0b1020);
+  --surface:light-dark(#ffffff,#12182a);
+  --surface2:light-dark(#eef1f7,#182039);
+  --text:light-dark(#111827,#f5f7ff);
+  --muted:light-dark(#5b6475,#aeb8d0);
+  --line:light-dark(#dfe4ee,#29334f);
+  --accent:light-dark(#5b46f0,#8b7cff);
+  --accent2:light-dark(#17a673,#36d49a);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+#app{min-height:100vh;background:var(--bg)}
+.wrap{width:min(1120px,92%);margin:auto}
+.progress{
+  position:fixed;left:0;top:0;width:0;height:2px;background:var(--accent);
+  z-index:50;box-shadow:0 0 18px color-mix(in srgb,var(--accent),transparent 40%);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;padding:22px 0;
+  border-bottom:1px solid transparent;position:relative;z-index:10;
+}
+.brand{font-weight:800;letter-spacing:-.03em}
+.badge{
+  font-size:12px;padding:7px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);
+}
+.hero{
+  padding:72px 0 56px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;min-height:620px;
+}
+.eyebrow{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.hero h1{font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-.055em;margin:16px 0;max-width:760px}
+.hero h1 span{display:inline-block}
+.hero p{font-size:19px;line-height:1.65;color:var(--muted);max-width:680px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  border:0;border-radius:12px;padding:14px 20px;font-weight:800;cursor:pointer;background:var(--accent);color:#fff;
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease),background .3s ease;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 18px 45px color-mix(in srgb,var(--accent),transparent 72%)}
+.btn.alt{background:var(--surface2);color:var(--text);border:1px solid var(--line)}
+.panel{
+  background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px;
+  box-shadow:0 18px 60px #00000018;position:relative;overflow:hidden;
+  transition:transform .7s var(--ease),box-shadow .7s var(--ease);
+}
+.panel::after{
+  content:"";position:absolute;inset:-40%;
+  background:radial-gradient(circle at 50% 50%,color-mix(in srgb,var(--accent),transparent 87%),transparent 45%);
+  opacity:.55;pointer-events:none;transform:translateY(20%);transition:transform 1s var(--ease);
+}
+.panel:hover{transform:translateY(-6px);box-shadow:0 28px 90px #00000022}
+.panel:hover::after{transform:translateY(-8%)}
+.search{
+  background:var(--surface2);border-radius:14px;padding:14px 15px;margin-bottom:20px;color:var(--muted);font-size:14px;
+  position:relative;z-index:1;
+}
+.search .search-icon{display:inline-block;width:10px;height:10px;border:1.5px solid currentColor;border-radius:50%;margin-right:9px;position:relative;vertical-align:-1px}
+.search .search-icon::after{content:"";position:absolute;width:5px;height:1.5px;background:currentColor;right:-4px;bottom:-2px;transform:rotate(45deg);transform-origin:left center}
+.metric{
+  display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);position:relative;z-index:1;
+}
+.metric:last-child{border:0}
+.metric strong{font-size:22px;letter-spacing:-.04em}
+.section{padding:68px 0}
+.section h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em;margin:0 0 14px}
+.lead{color:var(--muted);font-size:17px;line-height:1.7;max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.card{
+  padding:24px;border:1px solid var(--line);border-radius:18px;background:var(--surface);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .4s ease;
+}
+.card:hover{transform:translateY(-7px);box-shadow:0 20px 45px #00000016;border-color:color-mix(in srgb,var(--accent),var(--line) 70%)}
+.icon{font-size:24px;color:var(--accent);font-weight:850}
+.card h3{margin:16px 0 8px}
+.card p{color:var(--muted);line-height:1.65}
+.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;overflow:hidden}
+.stat b{display:block;font-size:28px;letter-spacing:-.04em}
+.faq{border-top:1px solid var(--line)}
+details{padding:20px 0;border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:20px;line-height:1;transition:transform .35s var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+.cta{
+  margin:20px 0 72px;padding:42px;border-radius:24px;background:var(--surface2);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;gap:30px;overflow:hidden;position:relative;
+}
+.cta::before{content:"";position:absolute;width:220px;height:220px;right:-90px;top:-90px;border-radius:50%;background:color-mix(in srgb,var(--accent),transparent 84%);filter:blur(5px);transition:transform 1s var(--ease)}
+.cta:hover::before{transform:scale(1.35)}
+.footer{border-top:1px solid var(--line);padding:28px 0 50px;color:var(--muted);font-size:13px}
+.note{font-size:12px;color:var(--muted);margin-top:18px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal-delay-1{transition-delay:.08s}.reveal-delay-2{transition-delay:.16s}.reveal-delay-3{transition-delay:.24s}
+.line-grow{position:relative}
+.line-grow::after{content:"";display:block;width:0;height:2px;background:var(--accent);margin-top:14px;transition:width 1s var(--ease)}
+.line-grow.in::after{width:72px}
+.stat-value{display:inline-block}
+@media(max-width:800px){
+  .hero{grid-template-columns:1fr;padding-top:40px;min-height:auto}
+  .grid{grid-template-columns:1fr}
+  .proof{grid-template-columns:1fr 1fr}
+  .cta{flex-direction:column;align-items:flex-start}
+  .hero p{font-size:17px}
+}
+@media(max-width:480px){
+  .proof{grid-template-columns:1fr}
+  .nav{padding:16px 0;gap:12px}
+  .badge{font-size:10px}
+  .hero h1{font-size:46px}
+  .actions .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
-<div class="progress" id="progress"></div>
-<header class="wrap topbar"><a class="logo" href="#top">SEARCH <b>/</b> SIGNAL</a><nav class="navlinks"><a href="#system">System</a><a href="#motion">Motion</a><a href="#process">Process</a><a href="#engineering">Build</a></nav><div class="availability"><i class="dot"></i>SEM CONCEPT / 2026</div></header>
+<div class="progress" aria-hidden="true"></div>
+<div id="app">
+  <div class="wrap">
+    <nav class="nav reveal in">
+      <div class="brand">Search / Growth</div>
+      <div class="badge">SEM Landing Page · Portfolio Concept</div>
+    </nav>
 
-<main id="top">
-<section class="wrap hero">
-<div class="hero-copy">
-<div class="eyebrow">01 — Search intent / art direction / interaction</div>
-<h1><span>Make the</span><span>click feel <b class="acid">obvious.</b></span></h1>
-<p>A completely art-directed SEM landing-page concept: oversized typography, editorial composition, responsive motion, conversion structure and a visual system designed to look like a crafted campaign—not a generic website template.</p>
-<div class="hero-actions"><a class="btn" href="#system">Enter the system</a><a class="btn dark" href="#motion">View motion</a></div>
+    <main>
+      <section class="hero">
+        <div class="reveal">
+          <div class="eyebrow">Built for high-intent search</div>
+          <h1 class="line-grow">Turn search demand into <span>qualified action.</span></h1>
+          <p>A focused landing experience designed around one service, one audience, and one measurable conversion goal—without distracting navigation or unnecessary steps.</p>
+          <div class="actions">
+            <button class="btn" data-scroll="#contact">Get a strategy call</button>
+            <button class="btn alt" data-scroll="#process">See how it works</button>
+          </div>
+          <div class="note">Self-initiated portfolio concept · not previous client work</div>
+        </div>
+
+        <div class="panel reveal reveal-delay-2">
+          <div class="search"><span class="search-icon" aria-hidden="true"></span>service + solution + near me</div>
+          <div class="metric"><span>Message match</span><strong>01</strong></div>
+          <div class="metric"><span>Primary CTA</span><strong>01</strong></div>
+          <div class="metric"><span>Mobile-first</span><strong>100%</strong></div>
+          <div class="metric"><span>Friction</span><strong>Low</strong></div>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <div class="eyebrow reveal">Conversion architecture</div>
+        <h2 class="reveal">Every section has a job.</h2>
+        <p class="lead reveal">The page is structured to preserve search intent from the ad through the first action, while making the value proposition easy to scan on mobile.</p>
+        <div class="grid">
+          <article class="card reveal reveal-delay-1"><div class="icon">01</div><h3>Message match</h3><p>Align the headline, offer and proof with the intent behind the search query and campaign.</p></article>
+          <article class="card reveal reveal-delay-2"><div class="icon">02</div><h3>Trust quickly</h3><p>Use concise proof, process details and objection handling before asking for the conversion.</p></article>
+          <article class="card reveal reveal-delay-3"><div class="icon">03</div><h3>One action</h3><p>Keep the primary conversion path obvious and reduce competing navigation and decisions.</p></article>
+        </div>
+        <div class="proof">
+          <div class="stat reveal reveal-delay-1"><b class="stat-value" data-count="1">0</b><span>Core offer</span></div>
+          <div class="stat reveal reveal-delay-2"><b class="stat-value" data-count="3">0</b><span>Proof layers</span></div>
+          <div class="stat reveal reveal-delay-3"><b class="stat-value" data-count="2">0</b><span>CTA placements</span></div>
+          <div class="stat reveal"><b>∞</b><span>Test iterations</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="eyebrow reveal">SEO / SEM ready structure</div>
+        <h2 class="reveal">Built to be tested, not just admired.</h2>
+        <div class="grid">
+          <article class="card reveal reveal-delay-1"><h3>Semantic content</h3><p>Clear heading hierarchy, descriptive metadata, concise copy blocks and accessible interaction patterns.</p></article>
+          <article class="card reveal reveal-delay-2"><h3>Responsive QA</h3><p>Mobile-first layout with fluid typography and breakpoints designed for narrow and wide screens.</p></article>
+          <article class="card reveal reveal-delay-3"><h3>Iteration ready</h3><p>Sections are modular so campaign-specific messaging, proof and CTA variants can be tested without redesigning the whole page.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="eyebrow reveal">FAQ</div>
+        <div class="faq reveal">
+          <details open><summary>Can the page be adapted to a specific SEM campaign?</summary><p class="lead">Yes. The information architecture is intentionally modular so search intent, offer, proof and CTA can be tailored to a campaign.</p></details>
+          <details><summary>What would be tested before launch?</summary><p class="lead">Responsive layout, navigation and CTA behavior, content hierarchy, form interaction, browser/device rendering and basic performance issues.</p></details>
+          <details><summary>Is this a previous client project?</summary><p class="lead">No. This is a self-initiated portfolio concept created to demonstrate the workflow honestly.</p></details>
+        </div>
+      </section>
+
+      <section class="cta reveal" id="contact">
+        <div>
+          <div class="eyebrow">Ready for a focused page?</div>
+          <h2 style="margin:8px 0">Make the next click count.</h2>
+          <p class="lead">A concise landing experience can be adapted to the client's actual offer, brand and campaign requirements.</p>
+        </div>
+        <button class="btn" id="cta">Request a consultation</button>
+      </section>
+    </main>
+
+    <footer class="footer">Self-initiated Webflow-style SEM landing page concept. No client work is represented as prior experience.</footer>
+  </div>
 </div>
-<div class="hero-art" id="heroArt"><div class="poster"><div class="poster-grid"></div><div class="poster-title">SEARCH / SIGNAL — SEM LAB</div><div class="poster-big">SEARCH<br><i>WITH</i><br>INTENT.</div><div class="stamp">MESSAGE<br>MATCH<br>01 / 01</div></div><div class="float-card fc1"><small>MESSAGE MATCH</small><strong>98.4%</strong></div><div class="float-card fc2"><small>PRIMARY ACTION</small><strong>01 CTA</strong></div></div>
-<div class="hero-note">Scroll — the composition changes as you move</div>
-</section>
-
-<div class="ticker"><div class="ticker-track"><span>SEARCH INTENT <b>•</b></span><span>MESSAGE MATCH <em>•</em></span><span>CONVERSION <b>•</b></span><span>RESPONSIVE UX <em>•</em></span><span>MOTION SYSTEM <b>•</b></span><span>SEARCH INTENT <b>•</b></span><span>MESSAGE MATCH <em>•</em></span><span>CONVERSION <b>•</b></span><span>RESPONSIVE UX <em>•</em></span></div></div>
-
-<section class="wrap section" id="system">
-<div class="section-intro"><div><div class="eyebrow">02 — The system</div><h2>Not a template.<br> a visual <span style="color:var(--acid)">language.</span></h2></div><p>The page is built as a campaign experience. Every large visual, card, transition and CTA has a job: clarify intent, reduce uncertainty or move the visitor toward one primary action.</p></div><div class="rule"></div>
-<div class="bento">
-<article class="tile big"><div class="num">SYSTEM / 01</div><h3>Intent becomes composition.</h3><p>Search context controls the hierarchy. The first screen does not waste space on generic introductions—the message is immediate, visual and directional.</p><div class="signal"></div></article>
-<article class="tile"><div class="num">SYSTEM / 02</div><h3>Signal</h3><p>Visual contrast creates a clear focal point without filling the page with decorative noise.</p><div class="bars"><i></i><i></i><i></i><i></i><i></i></div></article>
-<article class="tile"><div class="num">SYSTEM / 03</div><h3>One action.</h3><p>Primary CTA stays dominant while supporting navigation remains deliberately quiet.</p><div class="mini-line"></div></article>
-<article class="tile"><div class="num">SYSTEM / 04</div><h3>Responsive by design.</h3><p>Composition collapses intentionally across mobile instead of simply shrinking desktop elements.</p></article>
-<article class="tile"><div class="num">SYSTEM / 05</div><h3>Motion with purpose.</h3><p>Scroll, pointer and drag interactions share one motion language.</p></article>
-</div>
-</section>
-
-<section class="showcase" id="motion">
-<div class="wrap showcase-head"><div><div class="eyebrow">03 — Motion gallery</div><h2>Scroll.<br>Drag.<br><span style="color:var(--acid)">Explore.</span></h2></div><p>This section is intentionally horizontal. Drag with the mouse, swipe on touch devices or use the trackpad. Each panel is a separate visual state.</p></div>
-<div class="rail" id="rail">
-<article class="slide"><div class="slide-art"><div class="shape"></div></div><div class="slide-label">MOTION / 01 — DEPTH</div><div class="slide-copy"><h3>Depth follows attention.</h3><p>Layered geometry, scale and light create spatial feedback instead of basic fade-in animations.</p></div></article>
-<article class="slide"><div class="slide-art"><div class="shape"></div></div><div class="slide-label">MOTION / 02 — SIGNAL</div><div class="slide-copy"><h3>Visual feedback is the interface.</h3><p>Shapes react continuously to progress, pointer movement and interaction state.</p></div></article>
-<article class="slide"><div class="slide-art"><div class="shape"></div></div><div class="slide-label">MOTION / 03 — TRANSITION</div><div class="slide-copy"><h3>One system, many states.</h3><p>The same visual grammar carries from hero to proof to conversion without breaking the composition.</p></div></article>
-</div>
-</section>
-
-<section class="wrap process" id="process"><div class="process-grid"><div class="process-sticky"><div class="eyebrow">04 — Conversion process</div><h2>Every step has a reason.</h2><p>As each stage enters the viewport it becomes active. This is not a list of features; it is the logic behind the page architecture.</p></div><div class="steps">
-<article class="step"><div class="n">01</div><div><h3>Match the search.</h3><p>Headline, visual language and first CTA align with the visitor's expected intent.</p></div></article>
-<article class="step"><div class="n">02</div><div><h3>Show the mechanism.</h3><p>Instead of vague claims, the page explains the process and what happens after the click.</p></div></article>
-<article class="step"><div class="n">03</div><div><h3>Remove uncertainty.</h3><p>Proof, objections and FAQ content appear where they are useful rather than being dumped into one block.</p></div></article>
-<article class="step"><div class="n">04</div><div><h3>Ask once.</h3><p>A focused primary action closes the journey without competing buttons everywhere.</p></div></article>
-</div></div></section>
-
-<section class="wrap engineering" id="engineering"><div class="terminal-wrap"><div class="terminal"><h3>Interaction engine / runtime</h3><div class="code"><span class="c">const</span> intent = <span class="v">'high'</span>;<br><span class="c">const</span> progress = scroll.normalized();<br><br>hero.depth( progress * <span class="p">42</span> );<br>poster.rotateY( pointer.x * <span class="p">8</span> );<br>cards.tilt( pointer, { max: <span class="p">6</span> } );<br>rail.drag({ snap: <span class="v">true</span> });<br>steps.activate( viewport.threshold );<br>motion.respect( reducedMotion );<br><br><span class="c">// deterministic, responsive, testable</span></div><div class="glow"></div></div><div class="engineering-copy"><div class="eyebrow">05 — Build layer</div><h2>Advanced motion.<br>Clean structure.</h2><p>The visual result is intentionally sophisticated, but the underlying architecture remains understandable: semantic sections, responsive CSS, native browser interactions and a small deterministic motion layer.</p><div class="checks"><div><b>✓</b> Mobile-first breakpoints</div><div><b>✓</b> Pointer parallax + 3D tilt</div><div><b>✓</b> Drag / swipe horizontal gallery</div><div><b>✓</b> Scroll-linked scene activation</div><div><b>✓</b> Reduced-motion support</div></div></div></div></section>
-
-<section class="wrap faq"><div class="eyebrow">06 — Practical handoff</div><h2>Designed to be<br><span style="color:var(--acid)">adapted.</span></h2><div class="faq-list"><details open><summary>Is this a previous client project?</summary><p>No. It is a self-initiated portfolio concept created to demonstrate the design and implementation approach for a search-centric SEM landing page.</p></details><details><summary>Can the visual system be adapted to a real brand?</summary><p>Yes. The structure is modular: brand assets, service copy, campaign intent, proof and CTA content can replace the concept content.</p></details><details><summary>What is the purpose of the motion?</summary><p>Motion is used to establish hierarchy, guide attention and create feedback—not simply to decorate the page.</p></details></div></section>
-
-<section class="wrap final"><div class="final-box" id="final"><div class="eyebrow">07 — Final frame</div><h2>Build the page<br>people <span style="color:var(--acid)">remember.</span></h2><p>A portfolio demonstration focused on SEM structure, visual art direction, responsive interaction and advanced front-end motion.</p><div class="hero-actions"><button class="btn" id="run">Run interaction test</button><a class="btn dark" href="#top">Back to top</a></div></div></section>
-</main>
-<footer class="wrap footer"><strong>SEARCH / SIGNAL</strong><span>Self-initiated SEM landing-page concept · 2026</span></footer>
-<button class="search" id="search" aria-label="Optional search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 5 5"/></svg></button><div class="toast" id="toast"></div>
 <script>
-(()=>{const q=s=>document.querySelector(s),qa=s=>[...document.querySelectorAll(s)],reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-const progress=q('#progress'),hero=q('.hero-art'),rail=q('#rail'),toast=q('#toast');let sy=scrollY,ly=sy;
-const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
-addEventListener('scroll',()=>{sy=scrollY},{passive:true});
-function tick(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max?sy/max*100:0)+'%';if(!reduce){hero.style.transform='translate3d('+((sy-ly)*-.18)+'px,0,0)';hero.style.transformOrigin='center';}
-ly+=(sy-ly)*.08;requestAnimationFrame(tick)}tick();
-let down=false,sx=0,sl=0;rail.addEventListener('pointerdown',e=>{down=true;sx=e.clientX;sl=rail.scrollLeft;rail.classList.add('drag');rail.setPointerCapture?.(e.pointerId)});rail.addEventListener('pointermove',e=>{if(down)rail.scrollLeft=sl-(e.clientX-sx)});['pointerup','pointercancel','mouseleave'].forEach(x=>rail.addEventListener(x,()=>{down=false;rail.classList.remove('drag')}));
-qa('.tile').forEach(el=>el.addEventListener('pointermove',e=>{if(reduce)return;const r=el.getBoundingClientRect(),x=e.clientX/r.width-r.left/r.width,y=e.clientY/r.height-r.top/r.height;el.style.transform='perspective(900px) rotateY('+((e.clientX-r.left)/r.width-.5)*5+'deg) rotateX('+(-((e.clientY-r.top)/r.height-.5)*5)+'deg) translateY(-6px)'}));qa('.tile').forEach(el=>el.addEventListener('pointerleave',()=>el.style.transform=''));
-const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('active')),{threshold:.45});qa('.step').forEach(x=>io.observe(x));
-q('#search').addEventListener('click',()=>{toast.textContent='Optional search control — ready for campaign integration.';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)});
-q('#run').addEventListener('click',()=>{toast.textContent='Interaction test complete — scroll, drag and tilt are active.';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2000)});
+(() => {
+  const progress = document.querySelector('.progress');
+  const revealItems = document.querySelectorAll('.reveal:not(.in)');
+
+  const updateProgress = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
+    progress.style.width = `${Math.min(100, ratio * 100)}%`;
+  };
+
+  window.addEventListener('scroll', updateProgress, {passive:true});
+  updateProgress();
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in');
+      if (entry.target.matches('.stat')) animateCounter(entry.target.querySelector('[data-count]'));
+      observer.unobserve(entry.target);
+    });
+  }, {threshold:.16, rootMargin:'0px 0px -40px'});
+
+  function animateCounter(el){
+    if(!el || el.dataset.done) return;
+    el.dataset.done = '1';
+    const target = Number(el.dataset.count || 0);
+    const start = performance.now();
+    const duration = 620;
+    const tick = now => {
+      const p = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = String(Math.round(target * eased));
+      if(p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  revealItems.forEach(el => observer.observe(el));
+  document.querySelectorAll('[data-scroll]').forEach(btn => {
+    btn.addEventListener('click', () => document.querySelector(btn.dataset.scroll)?.scrollIntoView({behavior:'smooth'}));
+  });
+  document.getElementById('cta').addEventListener('click', () => {
+    const btn = document.getElementById('cta');
+    const old = btn.textContent;
+    btn.textContent = 'Demo CTA captured ✓';
+    setTimeout(() => btn.textContent = old, 1500);
+  });
 })();
 </script>
-</body></html>
+</body>
+</html>
